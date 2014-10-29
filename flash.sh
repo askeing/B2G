@@ -115,6 +115,8 @@ flash_fastboot()
 	if ! run_fastboot devices; then
 		echo Couldn\'t setup fastboot
 		return 1
+	else
+		echo "Waiting for fastboot mode device"
 	fi
 
 	case $lockedness in
